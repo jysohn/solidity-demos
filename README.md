@@ -52,3 +52,7 @@ Run Python for debugging (allows variable calls)
 ```sh
 brownie test --pdb
 ```
+Run Brownie console for direct calls
+```sh
+brownie console
+```
