@@ -10,12 +10,6 @@ def test_deploy():
     # Assert
     assert starting_value == expected
 
-def get_account():
-    if(network.show_active() == "development"):
-        return accounts[0]
-    else:
-        return accounts.add(config["wallets"]["from_key"])
-
 def test_store():
     account = accounts[0]
     simple_storage = SimpleStorage.deploy({"from": account})
