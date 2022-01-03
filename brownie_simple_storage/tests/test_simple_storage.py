@@ -1,4 +1,4 @@
-from brownie import SimpleStorage, accounts
+from brownie import SimpleStorage, accounts, config, network
 
 def test_deploy():
     # Arrange
@@ -9,6 +9,12 @@ def test_deploy():
     expected = 0
     # Assert
     assert starting_value == expected
+
+def get_account():
+    if(network.show_active() == "development"):
+        return accounts[0]
+    else:
+        return accounts.add(config["wallets"]["from_key"])
 
 def test_store():
     account = accounts[0]
