@@ -28,6 +28,14 @@ View Brownie accounts
 ```sh
 brownie accounts list
 ```
+View Brownie networks
+```sh
+brownie networks list
+```
+Run Brownie network
+``sh
+brownie run scripts/<script_name>.py --network rinkeby
+``
 Create or delete Brownie accounts
 ```sh
 brownie accounts <new | delete> <account name>
