@@ -34,7 +34,7 @@ brownie accounts <new | delete> <account name>
 ```
 Run all of the test functions in /tests
 ```sh
-brownie test
+brownie test <-s for verbose>
 ```
 Run only specified test function (e.g. test_store())
 ```sh
