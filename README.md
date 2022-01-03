@@ -33,9 +33,9 @@ View Brownie networks
 brownie networks list
 ```
 Run Brownie network
-``sh
+```sh
 brownie run scripts/<script_name>.py --network rinkeby
-``
+```
 Create or delete Brownie accounts
 ```sh
 brownie accounts <new | delete> <account name>
