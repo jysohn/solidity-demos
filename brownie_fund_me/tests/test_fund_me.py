@@ -5,8 +5,6 @@ import pytest
 
 def test_can_fund_and_withdraw():
     # can pass below if statement to only test in local networks
-    if network.show_active() not in LOCAL_BLOCKCHAIN_ENVIRONMENTS:
-        pytest.skip("only for local testing")
     account = get_account()
     fund_me = deploy_fund_me()
     tx = fund_me.fund({"from": account, "value": 10})
