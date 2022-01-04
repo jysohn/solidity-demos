@@ -20,7 +20,7 @@ Compile project using Brownie
 ```sh
 brownie compile
 ```
-Run .py using Brownie
+Run .py using Brownie (automatically runs Ganache CLI locally)
 ```sh
 brownie run scripts/<script_name>.py
 ```
@@ -32,7 +32,7 @@ View Brownie networks
 ```sh
 brownie networks list
 ```
-Run Brownie network
+Run Brownie network (see below for how to add networks)
 ```sh
 brownie run scripts/<script_name>.py --network rinkeby
 ```
@@ -55,4 +55,13 @@ brownie test --pdb
 Run Brownie console for direct calls
 ```sh
 brownie console
+```
+# Linking Ganache UI onto Brownie
+To link Ganache UI with Brownie, simply run with UI open
+```sh
+brownie run scripts/<script_name>.py
+```
+To add new network to Brownie (in this case, ganache-local to Ethereum)
+```sh
+brownie networks add Ethereum ganache-local host=http://127.0.0.1:8545 chainid=1337
 ```
